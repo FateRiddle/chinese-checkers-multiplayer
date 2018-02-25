@@ -19,7 +19,7 @@ class Zi extends Component {
 
   handleClick = () => {
     const { position, moves, ctx } = this.props
-    if (ctx.winner) {
+    if (ctx.gameover) {
       return
     }
     if (position[2] === ctx.currentPlayer) {

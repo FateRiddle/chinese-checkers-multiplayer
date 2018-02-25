@@ -22,7 +22,7 @@ class Circle extends Component {
 
   handleClick = () => {
     const { position, isPossible, moves, ctx, G } = this.props
-    if (ctx.winner) {
+    if (ctx.gameover) {
       return
     }
     if (G.activeZi && isPossible) {

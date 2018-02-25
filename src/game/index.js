@@ -1,4 +1,4 @@
-import Game from 'boardgame.io/game'
+import { Game } from 'boardgame.io/core'
 import { _equal } from '../util'
 import { init2P } from '../constant'
 import { getWinner } from './winCondition'
@@ -38,23 +38,11 @@ const ChineseChecker = Game({
     },
   },
 
-  victory: (G, ctx) => {
-    return getWinner(G.zis)
+  flow: {
+    endGameIf: (G, ctx) => {
+      return getWinner(G.zis)
+    },
   },
-
-  // flow: (ctx, action, G) => {
-  //   switch (action.type) {
-  //     case 'RESTART':
-  //       return {
-  //         ...ctx,
-  //         turn: 0,
-  //         currentPlayer: '0',
-  //         winner: null,
-  //       }
-  //     default:
-  //       return ctx
-  //   }
-  // },
 })
 
 export default ChineseChecker

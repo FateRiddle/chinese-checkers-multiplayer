@@ -45,5 +45,4 @@ export const getWinner = zis => {
   if (win2) {
     return '1' // 玩家2赢了
   }
-  return null
 }

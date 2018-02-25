@@ -5,14 +5,12 @@ import { boardSpots, boardOutier } from '../constant'
 import { _possiblePath, _equal, _hasZi } from '../util'
 
 class Board extends Component {
-  componentWillReceiveProps = nextProps => {
-    const deepEqual = (a, b) => JSON.stringify(a) === JSON.stringify(b)
-    if (!deepEqual(this.props.G.zis, nextProps.G.zis)) {
-      // console.log('hahaha')
-    }
-  }
-
-  componentDidMount = () => {}
+  // componentWillReceiveProps = nextProps => {
+  //   const deepEqual = (a, b) => JSON.stringify(a) === JSON.stringify(b)
+  //   if (!deepEqual(this.props.G.zis, nextProps.G.zis)) {
+  //     // console.log('hahaha')
+  //   }
+  // }
 
   getPositionInfo = position => {
     const { zis } = this.props.G
@@ -36,7 +34,7 @@ class Board extends Component {
   }
 
   render() {
-    const { G, moves, endTurn, ctx } = this.props
+    const { G, moves, events: { endTurn }, ctx } = this.props
 
     return (
       <div className="w-75 mw7">
@@ -46,9 +44,9 @@ class Board extends Component {
           onContextMenu={this.onRightClick}
         >
           {// show winner and restart option when game ends
-          ctx.winner && (
+          ctx.gameover && (
             <g>
-              <Zi position={[-13, -9, ctx.winner]} />
+              <Zi position={[-13, -9, ctx.gameover]} />
               <text x="4.5" y="3" style={{ fontSize: '2px' }}>
                 wins!
               </text>

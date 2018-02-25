@@ -1,4 +1,4 @@
-import Client from 'boardgame.io/client'
+import { Client } from 'boardgame.io/client'
 import Board from './components/Board'
 import ChineseChecker from './game'
 import './App.css'
