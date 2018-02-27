@@ -34,8 +34,8 @@ class Board extends Component {
   }
 
   render() {
-    const { G, moves, events: { endTurn }, ctx } = this.props
-
+    const { G, moves, events: { endTurn }, ctx, isConnected, playerID } = this.props
+    console.log(this.props)
     return (
       <div className="w-75 mw7">
         <svg
@@ -108,6 +108,7 @@ class Board extends Component {
               />
             )
           })}
+          {}
         </svg>
         <span className="dib ma3">
           Click to pick a piece & move. Right click to cancel selection.

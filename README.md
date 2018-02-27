@@ -1,4 +1,4 @@
-# QQ 跳棋 (单机版)
+# QQ 跳棋 (在线)
 
 开发工具:
 
@@ -10,9 +10,9 @@
 
 ```bash
 # 下载
-git clone https://github.com/FateRiddle/ChineseChecker.git
+git clone https://github.com/FateRiddle/chinese-checkers-multiplayer.git
 # 安装
 yarn
 # 运行
-yarn start
+yarn server
 ```

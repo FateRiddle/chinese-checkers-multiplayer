@@ -1,0 +1,9 @@
+{
+  "presets": [["es2015", { "modules": false }], "react"],
+  "env": {
+    "targets": {
+      "node": "current"
+    }
+  },
+  "plugins": ["transform-object-rest-spread", "transform-class-properties"]
+}
